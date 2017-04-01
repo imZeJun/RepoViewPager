@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
     }
 
     public void notUpdateActivity(View view) {
-        Intent intent = new Intent(this, NotUpdateActivity.class);
+        Intent intent = new Intent(this, DemoActivity.class);
         startActivity(intent);
     }
 }

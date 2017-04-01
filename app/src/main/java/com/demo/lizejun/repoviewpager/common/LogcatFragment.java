@@ -35,6 +35,36 @@ public class LogcatFragment extends Fragment {
         Log.d(getLogTag(), "onAttach");
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.d(getLogTag(), "onCreate");
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.d(getLogTag(), "onViewCreated");
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.d(getLogTag(), "onActivityCreated");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d(getLogTag(), "onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(getLogTag(), "onResume");
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,6 +75,18 @@ public class LogcatFragment extends Fragment {
         textView.setText(title);
         Log.d(getLogTag(), "onCreateView");
         return contentView;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d(getLogTag(), "onPause");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(getLogTag(), "onStop");
     }
 
     @Override
